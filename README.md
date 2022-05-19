@@ -1,5 +1,5 @@
 # 搜狗日志数据分析
-**数据集路径：**src/data/SogouQ.reduced（一天的用户查询日志）
+**数据集路径：** src/data/SogouQ.reduced（一天的用户查询日志）
 
 **数据格式：**
 
