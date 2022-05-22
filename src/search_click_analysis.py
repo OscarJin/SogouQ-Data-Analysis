@@ -27,4 +27,3 @@ if __name__ == "__main__":
     for i, v in search_click_top10.items():
         line = i.strip('[').strip(']').split(', ')
         print(str(eval(line[0])) + "\t" + str(eval(line[1])) + "\t" + str(v), file=output)
-        
