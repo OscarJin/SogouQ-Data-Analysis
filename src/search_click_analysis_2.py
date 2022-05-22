@@ -11,4 +11,3 @@ output = open("result/search_click_top10.txt", 'w+', encoding='utf-8')
 for i, v in search_click_top10.items():
     line = i.strip('[').strip(']').split(', ')
     print(str(eval(line[0]))+"\t"+str(eval(line[1]))+"\t"+str(v), file=output)
-    #print(str(i[0])+"\t"+str(i[1])+"\t"+str(v), file=output)
