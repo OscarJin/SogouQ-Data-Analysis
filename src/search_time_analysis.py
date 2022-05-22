@@ -3,7 +3,6 @@
 日期：2022年05月19日
 """
 import pandas as pd
-import jieba
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("data/SogouQ.csv", sep=',')
