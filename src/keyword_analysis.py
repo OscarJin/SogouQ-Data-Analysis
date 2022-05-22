@@ -26,9 +26,18 @@ print(keyword_count_sorted)
 stop = open("data/Chinese_stop_words.txt", 'r+', encoding='utf-8')
 stopwords = stop.read().split("\n")
 
+# output top 10
 num = 0
 output = open("result/keywords_top10.txt", 'w+', encoding='utf-8')
 for key, value in keyword_count_sorted.items():
     if not(key in stopwords) and len(key) > 1 and num < 10:
         print(key+"\t"+str(value), file=output)
         num += 1
+
+# output top 100 for wordcloud
+# num = 0
+# output_100 = open("data/keywords_top100.txt", 'w+', encoding='utf-8')
+# for key, value in keyword_count_sorted.items():
+#     if not(key in stopwords) and len(key) > 1 and num < 100:
+#         print(key+"\t"+str(value), file=output_100)
+#         num += 1
