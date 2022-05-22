@@ -20,7 +20,7 @@ keyword_count = dict(Counter(keyword_list))
 
 # sort the count
 keyword_count_sorted = dict(sorted(keyword_count.items(), key=lambda x: x[1], reverse=True))
-print(keyword_count_sorted)
+# print(keyword_count_sorted)
 
 # delete the stopping words
 stop = open("data/Chinese_stop_words.txt", 'r+', encoding='utf-8')
