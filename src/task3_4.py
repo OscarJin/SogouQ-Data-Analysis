@@ -2,7 +2,7 @@ import warnings
 import pandas as pd
 warnings.filterwarnings('ignore')
 
-data = pd.read_csv("processed_data.csv", sep=',')
+data = pd.read_csv("data/processed_data.csv", sep=',')
 print(data['Merge'])
 data1 = data['Merge']
 data2 = pd.value_counts(data1)
@@ -15,9 +15,9 @@ print(a)
 print(type(a))
 columns = ['Id', 'Word', 'Frequency']
 dates = []
-result=pd.DataFrame(columns=columns,index=dates)
+result = pd.DataFrame(columns=columns, index=dates)
 for i in range(10):
-    result.loc[i, 'Frequency']=data3.iloc[i]
+    result.loc[i, 'Frequency'] = data3.iloc[i]
     b = ind[i]
     c = b.split(',', 2)
     d = c[0]
@@ -32,4 +32,4 @@ for i in range(10):
     result.loc[i, 'Id'] = x
     result.loc[i, 'Word'] = y
 print(result)
-result.to_csv('search_click_top10.txt', sep='\t', index=True, header=True)
+result.to_csv('result/search_click_top10.txt', sep='\t', index=True, header=True)
