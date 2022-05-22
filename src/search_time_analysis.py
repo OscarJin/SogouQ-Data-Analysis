@@ -15,12 +15,12 @@ sg_time = df.groupby(['访问时间'])
 key_sg_time = pd.DataFrame(sg_time.groups.keys())
 size_sg_time = pd.DataFrame(sg_time.size()).reset_index(drop=True)
 
-# 将时间段和用户搜索次数两列合并为新的dataframe，存为res.csv
+# 将时间段和用户搜索次数两列合并为新的dataframe，存为search_time_analysis.txt
 res = pd.concat([key_sg_time, size_sg_time], axis=1)
 res.columns = ['时间段', '用户搜索次数']
 res.to_csv('result/search_time_analysis.txt', sep='\t', index=False, encoding='utf_8_sig')
 
-# 画出柱状图（在极大极小值上标数值）并保存
+# 画出柱状图（在极大极小值上标数值）并保存为search_time_analysis.png
 plt.bar(res['时间段'], res['用户搜索次数'])
 plt.xlabel('时间段(h)')
 plt.ylabel('用户搜索次数')
