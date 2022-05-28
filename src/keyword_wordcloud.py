@@ -16,8 +16,13 @@ df1 = keyword_df[1].tolist()
 keyword_top100 = dict(zip(df0, df1))
 print(keyword_top100)
 
+# create mask
+img = Image.open(r'data/mask.jpg')
+img_array = np.array(img)
+
 # 创建词云
 wc = WordCloud(
+    mask=img_array,
     width=1200,
     height=800,
     background_color='#383838',  # grey
