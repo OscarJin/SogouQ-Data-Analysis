@@ -4,6 +4,8 @@
 """
 import pandas as pd
 import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings('ignore')
 
 df = pd.read_csv("data/SogouQ.csv", sep=',')
 
@@ -31,4 +33,4 @@ for a, b in zip(res['时间段'][max_min], res['用户搜索次数'][max_min]):
     plt.text(a, b+0.1, '%.0f' % b, ha='center', va='bottom', fontsize=11)
 plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']
 plt.rcParams['axes.unicode_minus'] = False
-plt.savefig("result/search_time_analysis.png")
+plt.savefig("result/search_time_analysis.png", dpi=300)
