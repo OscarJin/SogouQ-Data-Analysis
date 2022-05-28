@@ -8,6 +8,7 @@ warnings.filterwarnings('ignore')
 sogou = pd.read_csv("data/SogouQ.csv")
 
 # TODO: 获取日志数据中的查询词，去除停用词并进行中文分词后，统计得到出现次数最高的前10个关键词
+jb.load_userdict('data/userdict.txt')
 sogou['查询词'] = [jb.lcut(str(line)) for line in sogou['查询词']]
 print(sogou['查询词'].head())
 
