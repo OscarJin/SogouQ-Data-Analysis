@@ -25,7 +25,7 @@ wc = WordCloud(
     mask=img_array,
     width=1200,
     height=800,
-    background_color='#383838',  # grey
+    background_color='white',
     max_words=200,
     font_path='simhei')
 wc.generate_from_frequencies(keyword_top100)
