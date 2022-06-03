@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 
-data = pd.read_csv('keywords.txt', sep="\t", names=['word', 'Frequency'])
-print(data)
+data = pd.read_csv('data/keywords.txt', sep="\t", names=['word', 'Frequency'])
+print(data.head())
 print(data.describe())
 data['target'] = 0
 conditions = [
