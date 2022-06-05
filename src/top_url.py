@@ -3,15 +3,15 @@ import numpy as np
 import pandas as pd
 warnings.filterwarnings('ignore')
 
-data = pd.read_csv("SogouQ.csv", sep=',')
+data = pd.read_csv("data/SogouQ.csv", sep=',')
 # print(data)
-url = data['click_URL']
+url = data['用户点击的URL']
 a = url.value_counts()
 
 # print(a)
 columns = ['url', 'Frequency']
 dates = []
-result = pd.DataFrame(columns=columns,index=dates)
+result = pd.DataFrame(columns=columns, index=dates)
 ind = a.index
 length = len(a)
 b = pd.DataFrame(a)
